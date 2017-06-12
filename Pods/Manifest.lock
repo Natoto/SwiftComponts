@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (4.4.0)
+  - HBKit (0.6.54)
+  - JCAlertController (2.1.5)
+  - NSObjectBlockSEL (0.0.1)
+  - SVProgressHUD (2.1.2)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - HBKit (from `https://github.com/Natoto/HBFastTableViewCotroller.git`)
+  - JCAlertController
+  - NSObjectBlockSEL (from `https://github.com/Natoto/HBLocalPod`)
+  - SVProgressHUD
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  HBKit:
+    :git: https://github.com/Natoto/HBFastTableViewCotroller.git
+  NSObjectBlockSEL:
+    :git: https://github.com/Natoto/HBLocalPod
+
+CHECKOUT OPTIONS:
+  HBKit:
+    :commit: ce619dea487d6fcf5a44ae0a346c175c4023a185
+    :git: https://github.com/Natoto/HBFastTableViewCotroller.git
+  NSObjectBlockSEL:
+    :commit: 7b7307daf5a35a17efce93f424e2e4e8a7c890d5
+    :git: https://github.com/Natoto/HBLocalPod
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  HBKit: 7952093e745c19a35731b97cfa967c4eff30f385
+  JCAlertController: acc849a3853ffd94dd57b1d15ade9032519d1edc
+  NSObjectBlockSEL: aa876bdc0e9a537a096b7ce044ded46f81234a31
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 37c73d65c81e55e7904d4665e8b461b87849e30a
+
+COCOAPODS: 1.1.1

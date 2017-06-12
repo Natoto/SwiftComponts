@@ -1,0 +1,18 @@
+{
+  "name": "NSObjectBlockSEL",
+  "version": "0.0.1",
+  "summary": "NSObjectBlockSEL desc",
+  "homepage": "https://github.com/natoto/HBLocalPod",
+  "authors": {
+    "nonato": "787038442@qq.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "."
+  },
+  "source_files": "NSObjectBlockSEL/**/*.{h,m}",
+  "frameworks": "UIKit",
+  "requires_arc": true
+}

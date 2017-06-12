@@ -1,0 +1,6 @@
+framework module Pods_SwiftComponts {
+  umbrella header "Pods-SwiftComponts-umbrella.h"
+
+  export *
+  module * { export * }
+}

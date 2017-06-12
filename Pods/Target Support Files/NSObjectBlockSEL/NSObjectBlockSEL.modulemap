@@ -1,0 +1,6 @@
+framework module NSObjectBlockSEL {
+  umbrella header "NSObjectBlockSEL-umbrella.h"
+
+  export *
+  module * { export * }
+}
