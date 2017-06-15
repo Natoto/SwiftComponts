@@ -43,6 +43,9 @@ class ViewController: HBBaseTableViewController {
         else if cs.key_indexpath == cs.key_indexpath(0, row: 12){
             ctr = CustomAlertViewController.init()
         }
+        else if cs.key_indexpath == cs.key_indexpath(0, row: 13){
+            ctr = ImageCollectionViewController.init()
+        }
         ctr.title = cs.title;
         ctr.view.backgroundColor = UIColor.white;
         self.navigationController?.pushViewController(ctr, animated: true)

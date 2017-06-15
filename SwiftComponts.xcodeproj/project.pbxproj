@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1D7C4B79AF668A49AC1C3779 /* Pods_SwiftComponts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DC37C99B0C287B77E470E3 /* Pods_SwiftComponts.framework */; };
+		F88BD1D41EEF810B00D0D7B6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BD1D21EEF810B00D0D7B6 /* CollectionViewCell.swift */; };
+		F88BD1D51EEF810B00D0D7B6 /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BD1D31EEF810B00D0D7B6 /* ImageCollectionViewController.swift */; };
+		F88BD1D81EEF9F3E00D0D7B6 /* XHNetworkCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88BD1D71EEF9F3E00D0D7B6 /* XHNetworkCache.swift */; };
 		F895CF6D1EEE92F700DA783C /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F895CF6C1EEE92F700DA783C /* CustomAlertViewController.swift */; };
 		F895CF6F1EEE9BDE00DA783C /* HBEXUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F895CF6E1EEE9BDE00DA783C /* HBEXUIColor.swift */; };
 		F895CF711EEEA98500DA783C /* HBEXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F895CF701EEEA98500DA783C /* HBEXButton.swift */; };
@@ -33,6 +36,10 @@
 		48E074BF1BA289EEBAB3EE49 /* Pods-SwiftComponts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftComponts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftComponts/Pods-SwiftComponts.debug.xcconfig"; sourceTree = "<group>"; };
 		51DC37C99B0C287B77E470E3 /* Pods_SwiftComponts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftComponts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7ED027058B388FDFF1C5F /* Pods-SwiftComponts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftComponts.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftComponts/Pods-SwiftComponts.release.xcconfig"; sourceTree = "<group>"; };
+		F88BD1D21EEF810B00D0D7B6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F88BD1D31EEF810B00D0D7B6 /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		F88BD1D71EEF9F3E00D0D7B6 /* XHNetworkCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHNetworkCache.swift; sourceTree = "<group>"; };
+		F88BD1D91EEFA00A00D0D7B6 /* SwiftComponts-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftComponts-Bridging-Header.h"; sourceTree = "<group>"; };
 		F895CF6C1EEE92F700DA783C /* CustomAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		F895CF6E1EEE9BDE00DA783C /* HBEXUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HBEXUIColor.swift; sourceTree = "<group>"; };
 		F895CF701EEEA98500DA783C /* HBEXButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HBEXButton.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 		F89694D91EEE6644009E2FAB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				F88BD1D71EEF9F3E00D0D7B6 /* XHNetworkCache.swift */,
 				F89694DA1EEE664C009E2FAB /* OpusResponseData.swift */,
 				F89694DB1EEE664C009E2FAB /* OpusList.swift */,
 				F89694DC1EEE664C009E2FAB /* PPGetHomeOpusListResp.swift */,
@@ -139,7 +147,10 @@
 				F895CF6C1EEE92F700DA783C /* CustomAlertViewController.swift */,
 				F8BEA97C1EEA88CD00B27BE9 /* Main.storyboard */,
 				F89694D71EEE65E5009E2FAB /* PPGetHomeOpusListResp.json */,
+				F88BD1D21EEF810B00D0D7B6 /* CollectionViewCell.swift */,
+				F88BD1D31EEF810B00D0D7B6 /* ImageCollectionViewController.swift */,
 				F8BEA97F1EEA88CD00B27BE9 /* Assets.xcassets */,
+				F88BD1D91EEFA00A00D0D7B6 /* SwiftComponts-Bridging-Header.h */,
 				F8BEA9811EEA88CD00B27BE9 /* LaunchScreen.storyboard */,
 				F8BEA9841EEA88CD00B27BE9 /* Info.plist */,
 			);
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F895CF6F1EEE9BDE00DA783C /* HBEXUIColor.swift in Sources */,
+				F88BD1D81EEF9F3E00D0D7B6 /* XHNetworkCache.swift in Sources */,
 				F89694E51EEE8700009E2FAB /* HBEXNSObject.swift in Sources */,
 				F89694E11EEE664C009E2FAB /* RootClass.swift in Sources */,
 				F89694DE1EEE664C009E2FAB /* OpusResponseData.swift in Sources */,
@@ -281,9 +293,11 @@
 				F8BEA9791EEA88CD00B27BE9 /* AppDelegate.swift in Sources */,
 				F895CF6D1EEE92F700DA783C /* CustomAlertViewController.swift in Sources */,
 				F89694E01EEE664C009E2FAB /* PPGetHomeOpusListResp.swift in Sources */,
+				F88BD1D41EEF810B00D0D7B6 /* CollectionViewCell.swift in Sources */,
 				F89694DF1EEE664C009E2FAB /* OpusList.swift in Sources */,
 				F8BEA98D1EEA9CFE00B27BE9 /* EXHBTableViewController.swift in Sources */,
 				F8BEA98B1EEA9BA400B27BE9 /* NetWorkViewController.swift in Sources */,
+				F88BD1D51EEF810B00D0D7B6 /* ImageCollectionViewController.swift in Sources */,
 				F89694D61EEE48D5009E2FAB /* HBEXString.swift in Sources */,
 				F895CF711EEEA98500DA783C /* HBEXButton.swift in Sources */,
 			);
@@ -416,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.SwiftComponts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftComponts/SwiftComponts-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -432,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.SwiftComponts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftComponts/SwiftComponts-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

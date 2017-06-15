@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Agrume.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ESPullToRefresh-ESPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ESPullToRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -15,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>JCAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,7 +62,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4819995AA3F2057805C6078184A5D7C5</key>
+		<key>10F0C3C80828CC88CE8154B17E6E0B8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F0C0F810568D3E82219429D9D870F04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>587D03C5743E7B1D8694BB48FE46D429</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>709B37C87082FC138C02EA729A3F8D0C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83D04EDAE5838FE3657C87DD12181688</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3AE9F08976B9262B4CE219D67CF2D8E</key>
+		<key>A50690D6AAB3A0E4699116A0FCFBCEF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A52075AEFF935EE4FA923BC7D35FF099</key>
+		<key>A96B49E49213AD62F31B1F4FCBC193C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,26 +1,37 @@
 PODS:
+  - Agrume (3.2.1)
   - Alamofire (4.4.0)
+  - ESPullToRefresh (2.6)
   - HBKit (0.6.54)
   - JCAlertController (2.1.5)
+  - Kingfisher (3.10.1)
   - NSObjectBlockSEL (0.0.1)
   - SVProgressHUD (2.1.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Agrume (from `https://github.com/JanGorman/Agrume.git`)
   - Alamofire
+  - ESPullToRefresh
   - HBKit (from `https://github.com/Natoto/HBFastTableViewCotroller.git`)
   - JCAlertController
+  - Kingfisher
   - NSObjectBlockSEL (from `https://github.com/Natoto/HBLocalPod`)
   - SVProgressHUD
   - SwiftyJSON
 
 EXTERNAL SOURCES:
+  Agrume:
+    :git: https://github.com/JanGorman/Agrume.git
   HBKit:
     :git: https://github.com/Natoto/HBFastTableViewCotroller.git
   NSObjectBlockSEL:
     :git: https://github.com/Natoto/HBLocalPod
 
 CHECKOUT OPTIONS:
+  Agrume:
+    :commit: 50ce3665bb7ae946dbed32d3e86306dd32a65b32
+    :git: https://github.com/JanGorman/Agrume.git
   HBKit:
     :commit: ce619dea487d6fcf5a44ae0a346c175c4023a185
     :git: https://github.com/Natoto/HBFastTableViewCotroller.git
@@ -29,13 +40,16 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Natoto/HBLocalPod
 
 SPEC CHECKSUMS:
+  Agrume: abf26210c3371bc6c74bbf2ced7a19d937bf8f0a
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   HBKit: 7952093e745c19a35731b97cfa967c4eff30f385
   JCAlertController: acc849a3853ffd94dd57b1d15ade9032519d1edc
+  Kingfisher: 33a1b82140fcb14a9fc13f78dfde2a03ff8de8cb
   NSObjectBlockSEL: aa876bdc0e9a537a096b7ce044ded46f81234a31
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 37c73d65c81e55e7904d4665e8b461b87849e30a
+PODFILE CHECKSUM: b41d299666fdac47e42ec313680f9bbcee7421d9
 
 COCOAPODS: 1.1.1

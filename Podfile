@@ -5,18 +5,23 @@ use_frameworks!
 
 target 'SwiftComponts' do
 
-pod 'Alamofire'
+pod 'Alamofire'         #网络框架
 
-pod 'SVProgressHUD'
+pod 'SVProgressHUD'     #等待框
 
-pod 'HBKit', :git => 'https://github.com/Natoto/HBFastTableViewCotroller.git'
+pod 'SwiftyJSON'        #读取model并格式化
 
-pod 'NSObjectBlockSEL',:git =>'https://github.com/Natoto/HBLocalPod'
+pod 'JCAlertController' #自定义弹窗
 
-pod 'SwiftyJSON'
+pod 'ESPullToRefresh'   #上下拉控件
 
-pod 'JCAlertController'
+pod 'HBKit', :git => 'https://github.com/Natoto/HBFastTableViewCotroller.git'  #快速开发tableview工具
 
+pod 'NSObjectBlockSEL',:git =>'https://github.com/Natoto/HBLocalPod' #在block里面调用要触发的事件
+
+pod 'Kingfisher'       #图片加载
+
+pod 'Agrume', :git => 'https://github.com/JanGorman/Agrume.git'  #图片浏览器
 
 end
 
