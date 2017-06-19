@@ -44,5 +44,91 @@
             </objects>
             <point key="canvasLocation" x="-1401" y="80"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="EJI-FX-6mr">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="aDf-CY-csj" customClass="WebViewController" customModule="SwiftComponts" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P3h-7t-jct"/>
+                        <viewControllerLayoutGuide type="bottom" id="bAw-D3-cdi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kz0-3L-r8Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewx-fu-mfs">
+                                <rect key="frame" x="0.0" y="582" width="375" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YI9-VI-DcU">
+                                        <rect key="frame" x="8" y="9" width="100" height="30"/>
+                                        <state key="normal" title="SendDataToJS"/>
+                                        <connections>
+                                            <action selector="sendDataToJS:" destination="aDf-CY-csj" eventType="touchUpInside" id="v3A-r4-ANZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tx-vm-1Dg">
+                                        <rect key="frame" x="8" y="47" width="97" height="30"/>
+                                        <state key="normal" title="CallJSHandler"/>
+                                        <connections>
+                                            <action selector="callJSHandler:" destination="aDf-CY-csj" eventType="touchUpInside" id="HC2-oS-yG0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaM-Rh-2b1">
+                                        <rect key="frame" x="179" y="47" width="188" height="30"/>
+                                        <state key="normal" title="CallJSHandlerWithCallBack"/>
+                                        <connections>
+                                            <action selector="callJSHandlerWithCallback:" destination="aDf-CY-csj" eventType="touchUpInside" id="Moa-li-ayE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tm-VW-Tdn">
+                                        <rect key="frame" x="176" y="9" width="191" height="30"/>
+                                        <state key="normal" title="SendDataToJSWithCallBack"/>
+                                        <connections>
+                                            <action selector="sendDataToJSWithCallback:" destination="aDf-CY-csj" eventType="touchUpInside" id="a9a-Oa-ONO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CaM-Rh-2b1" secondAttribute="bottom" constant="8" id="Btv-56-NMP"/>
+                                    <constraint firstItem="CaM-Rh-2b1" firstAttribute="top" secondItem="5Tm-VW-Tdn" secondAttribute="bottom" constant="8" id="Ce6-5m-FWb"/>
+                                    <constraint firstItem="6tx-vm-1Dg" firstAttribute="top" secondItem="YI9-VI-DcU" secondAttribute="bottom" constant="8" id="VtJ-wE-QgX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="W9z-u9-MaZ"/>
+                                    <constraint firstAttribute="height" constant="85" id="am0-RB-LP3"/>
+                                    <constraint firstAttribute="trailing" secondItem="CaM-Rh-2b1" secondAttribute="trailing" constant="8" id="ibt-LT-r4Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Tm-VW-Tdn" secondAttribute="trailing" constant="8" id="oVp-CS-bqT"/>
+                                    <constraint firstItem="6tx-vm-1Dg" firstAttribute="leading" secondItem="ewx-fu-mfs" secondAttribute="leading" constant="8" id="opc-V4-9kF"/>
+                                    <constraint firstAttribute="bottom" secondItem="6tx-vm-1Dg" secondAttribute="bottom" constant="8" id="sQO-TB-Gke"/>
+                                    <constraint firstItem="YI9-VI-DcU" firstAttribute="leading" secondItem="ewx-fu-mfs" secondAttribute="leading" constant="8" id="vhs-ta-Y7f"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RL-dL-Qrj">
+                                <rect key="frame" x="0.0" y="102" width="375" height="480"/>
+                                <color key="backgroundColor" red="0.28958413" green="0.31462949509999999" blue="0.32950475810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2RL-dL-Qrj" firstAttribute="top" secondItem="P3h-7t-jct" secondAttribute="bottom" constant="82" id="86l-jO-SZW"/>
+                            <constraint firstItem="bAw-D3-cdi" firstAttribute="top" secondItem="ewx-fu-mfs" secondAttribute="bottom" id="ASK-9C-bo1"/>
+                            <constraint firstAttribute="trailing" secondItem="2RL-dL-Qrj" secondAttribute="trailing" id="WgA-7K-Uue"/>
+                            <constraint firstAttribute="trailing" secondItem="ewx-fu-mfs" secondAttribute="trailing" id="gbh-PG-aRE"/>
+                            <constraint firstItem="ewx-fu-mfs" firstAttribute="top" secondItem="2RL-dL-Qrj" secondAttribute="bottom" id="k0g-8w-ypG"/>
+                            <constraint firstItem="2RL-dL-Qrj" firstAttribute="leading" secondItem="Kz0-3L-r8Y" secondAttribute="leading" id="srW-wJ-jLy"/>
+                            <constraint firstItem="ewx-fu-mfs" firstAttribute="leading" secondItem="Kz0-3L-r8Y" secondAttribute="leading" id="uva-Kh-7Su"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callJSHandlerBt" destination="6tx-vm-1Dg" id="2pb-JQ-F1f"/>
+                        <outlet property="callJSHandlerWithCallBackBt" destination="CaM-Rh-2b1" id="Tsy-hV-gHt"/>
+                        <outlet property="sendDataToJSBt" destination="YI9-VI-DcU" id="TX3-FT-z0f"/>
+                        <outlet property="sendDataToJSWithCallBackBt" destination="5Tm-VW-Tdn" id="C70-Tz-376"/>
+                        <outlet property="webView" destination="2RL-dL-Qrj" id="ntT-3q-Rwm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E9w-o6-Ea8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1042.4000000000001" y="781.25937031484261"/>
+        </scene>
     </scenes>
 </document>

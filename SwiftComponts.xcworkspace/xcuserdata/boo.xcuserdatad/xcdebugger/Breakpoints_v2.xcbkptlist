@@ -80,49 +80,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftComponts/ModelExViewController.swift"
-            timestampString = "519021163.03662"
+            timestampString = "519552919.287941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "savejson()"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "loadfromlocal()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftComponts.ModelExViewController.savejson () -&gt; ()"
-                  moduleName = "SwiftComponts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/boo/Documents/demo/SwiftComponts/SwiftComponts/ModelExViewController.swift"
-                  timestampString = "519027556.416667"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1068">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftComponts.ModelExViewController.(savejson () -&gt; ()).(closure #1)"
-                  moduleName = "SwiftComponts"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/boo/Documents/demo/SwiftComponts/SwiftComponts/ModelExViewController.swift"
-                  timestampString = "519027556.418061"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "22">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/Cache/Source/Shared/Storage/MemoryStorage.swift"
+            timestampString = "519550727.383668"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "cacheEntry(_:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -131,13 +115,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SwiftComponts/ModelExViewController.swift"
-            timestampString = "519027595.616557"
+            filePath = "SwiftComponts/WebViewController.swift"
+            timestampString = "519559940.310421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "loadfromlocal()"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "sendDataToJSWithCallback(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

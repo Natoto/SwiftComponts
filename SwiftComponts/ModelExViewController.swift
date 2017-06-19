@@ -12,6 +12,8 @@ import Foundation
 import HBKit
 import SVProgressHUD
 import Alamofire
+import Cache
+
 class ModelExViewController: HBBaseTableViewController {
 
     override func cs_titles() -> [String] {
@@ -19,7 +21,9 @@ class ModelExViewController: HBBaseTableViewController {
                 "【1】网络加载",
                 "【2】解析json到model",
                 "【3】保存json",
-                "【4】读取json",]
+                "【4】读取json",
+                "【5】序列化保存实体",
+                "【6】反序列化读取实体",]
     }
     
     override func cs_selectAction(cs: HBCellStruct) {
@@ -37,9 +41,18 @@ class ModelExViewController: HBBaseTableViewController {
         else if cs.key_indexpath == self.key_indexpath(0, row: 3){
             self.savejson()
         }
+        else if cs.key_indexpath == self.key_indexpath(0, row: 4){
+            self.readjson()
+        }
+        else if cs.key_indexpath == self.key_indexpath(0, row: 5){
+            self.saveentity()
+        }
+        else if cs.key_indexpath == self.key_indexpath(0, row: 6){
+            self.readentity()
+        }
     }
     
-    var json:JSON? = JSON.null
+    var jsonobj:SwiftyJSON.JSON? = SwiftyJSON.JSON.null
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,32 +64,63 @@ class ModelExViewController: HBBaseTableViewController {
     
         if let file = Bundle.main.path(forResource: "PPGetHomeOpusListResp", ofType: "json") {
             do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: file))
-                let json = try String.init(contentsOf: URL(fileURLWithPath: file))
+                let jsonstr = try String.init(contentsOf: URL(fileURLWithPath: file))
                 
-                XHNetworkCache.save_asyncJsonResponseToCacheFile(json as AnyObject, URL: "http://baidu.com") { (result) in
-                    
-                    if(result)
-                    {
-                        print("(异步)保存/更新成功")
-                    }
-                    else
-                    {
-                        print("(异步)保存/更新成功")
-                    }
-                }
-
+                let cache = SyncHybridCache.init(BasicHybridCache.init(name: "json"))
+                cache.add("str", object: "this is a string")
+                cache.add("addkey", object: jsonstr)
+                
+                
             } catch {
-                self.json = JSON.null
+                self.jsonobj = JSON.null
             }
         } else {
-            self.json = JSON.null
+            self.jsonobj = JSON.null
         }
     }
+    
+    func readjson() -> () {
+        
+        let cache = SyncHybridCache.init(BasicHybridCache.init(name: "json"))
+        let str:String! = cache.object("aakey");
+        print(str)
+        
+    }
+    //MARK: 保存实体 把数据序列化成data保存下来
+    func saveentity() -> () {
+        
+        if let file = Bundle.main.path(forResource: "PPGetHomeOpusListResp", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: file))
+                let json = try SwiftyJSON.JSON(data: data)
+                self.jsonobj = json
+                let resp:PPGetHomeOpusListResp? = PPGetHomeOpusListResp.init(fromJson: json);
+                let cache = SyncHybridCache.init(BasicHybridCache.init(name: "json"))
+                let respdata = NSKeyedArchiver.archivedData(withRootObject: resp!);
+                cache.add("jsonobj", object: respdata)
+               SVProgressHUD.showSuccess(withStatus: "保存成功~~")
+            } catch {
+                self.jsonobj = SwiftyJSON.JSON.null
+            }
+        } else {
+            self.jsonobj = SwiftyJSON.JSON.null
+        }
+    }
+    
+    //MARK:读取实体 从缓存中读取数据，并把数据反序列化成data
+    func readentity() -> () {
+        let cache = SyncHybridCache.init(BasicHybridCache.init(name: "json"))
+        let key = "jsonobj"
+        let data:Data! = cache.object(key)
+        let resp:PPGetHomeOpusListResp! = NSKeyedUnarchiver.unarchiveObject(with: data) as! PPGetHomeOpusListResp
+        self.presentAlert(msg: resp.description)
+    }
+    
     
     func jsontomodel() -> () {
          self.loadfromlocal()
     }
+    
     
     func loadfromnetwork() -> () {
         
@@ -84,9 +128,9 @@ class ModelExViewController: HBBaseTableViewController {
         Alamofire.request("http://7xicym.com1.z0.glb.clouddn.com/popaimg/PPGetHomeOpusListResp.json").responseJSON { (response:DataResponse) in
             
             do{
-                let json = try JSON.init(data: response.data!)
+                let json = try SwiftyJSON.JSON.init(data: response.data!)
                 let resp = PPGetHomeOpusListResp.init(fromJson: json)
-                self.json = json;
+                self.jsonobj = json;
                   print(resp.description)
                 SVProgressHUD.showSuccess(withStatus: "网络请求json成功转换成model")
             }catch{
@@ -100,18 +144,17 @@ class ModelExViewController: HBBaseTableViewController {
         if let file = Bundle.main.path(forResource: "PPGetHomeOpusListResp", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: file))
-                let json = try JSON(data: data)
-                self.json = json
+                let json = try SwiftyJSON.JSON(data: data)
+                self.jsonobj = json
                 let resp = PPGetHomeOpusListResp.init(fromJson: json);
                 print(resp.description);
                 self.presentAlert(msg: json.description)
             } catch {
-                self.json = JSON.null
+                self.jsonobj = SwiftyJSON.JSON.null
             }
         } else {
-            self.json = JSON.null
-        }
-        
+            self.jsonobj = SwiftyJSON.JSON.null
+        } 
     }
 
     override func didReceiveMemoryWarning() {

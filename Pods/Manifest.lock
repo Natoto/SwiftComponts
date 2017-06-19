@@ -1,6 +1,9 @@
 PODS:
   - Agrume (3.2.1)
   - Alamofire (4.4.0)
+  - Cache (2.3.0):
+    - CryptoSwift
+  - CryptoSwift (0.6.9)
   - ESPullToRefresh (2.6)
   - HBKit (0.6.54)
   - JCAlertController (2.1.5)
@@ -8,10 +11,12 @@ PODS:
   - NSObjectBlockSEL (0.0.1)
   - SVProgressHUD (2.1.2)
   - SwiftyJSON (3.1.4)
+  - WebViewJavascriptBridge (6.0.2)
 
 DEPENDENCIES:
   - Agrume (from `https://github.com/JanGorman/Agrume.git`)
   - Alamofire
+  - Cache (~> 2.3.0)
   - ESPullToRefresh
   - HBKit (from `https://github.com/Natoto/HBFastTableViewCotroller.git`)
   - JCAlertController
@@ -19,6 +24,7 @@ DEPENDENCIES:
   - NSObjectBlockSEL (from `https://github.com/Natoto/HBLocalPod`)
   - SVProgressHUD
   - SwiftyJSON
+  - WebViewJavascriptBridge
 
 EXTERNAL SOURCES:
   Agrume:
@@ -42,6 +48,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Agrume: abf26210c3371bc6c74bbf2ced7a19d937bf8f0a
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Cache: 077e4e799c394ccffc18bb3240f5b55cb9b3cc1b
+  CryptoSwift: a22f6ba238e9ce4d26ee7bf45b9ed82e7122d4a0
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   HBKit: 7952093e745c19a35731b97cfa967c4eff30f385
   JCAlertController: acc849a3853ffd94dd57b1d15ade9032519d1edc
@@ -49,7 +57,8 @@ SPEC CHECKSUMS:
   NSObjectBlockSEL: aa876bdc0e9a537a096b7ce044ded46f81234a31
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
 
-PODFILE CHECKSUM: b41d299666fdac47e42ec313680f9bbcee7421d9
+PODFILE CHECKSUM: 3f223b5eaf4088c8dcc68398c30b5d902acc3556
 
 COCOAPODS: 1.1.1

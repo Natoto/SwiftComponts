@@ -40,6 +40,14 @@ class ViewController: HBBaseTableViewController {
         {
              ctr = ModelExViewController.init()
         }
+        else if cs.key_indexpath == cs.key_indexpath(0, row: 2)
+        {
+            ctr = ModelExViewController.init()
+        }
+        else if cs.key_indexpath == cs.key_indexpath(0, row: 3)
+        {
+             ctr = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebViewController") 
+        }
         else if cs.key_indexpath == cs.key_indexpath(0, row: 12){
             ctr = CustomAlertViewController.init()
         }

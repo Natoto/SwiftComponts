@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Cache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CryptoSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ESPullToRefresh-ESPullToRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -59,10 +69,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>WebViewJavascriptBridge.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0A56845BE8159A4B194B811A21617500</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>10F0C3C80828CC88CE8154B17E6E0B8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>110C5FABFA4A4FEF805AD37D6572D060</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>587D03C5743E7B1D8694BB48FE46D429</key>
+		<key>36B3359F0E9A942278A9373104DD14A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F547DA4AF9C8E5204EB6D28A3AF834C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +127,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A50690D6AAB3A0E4699116A0FCFBCEF1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A96B49E49213AD62F31B1F4FCBC193C2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C9A2CE7F2FC5E7F2062260C838EDAA3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D876162C33A733835F35C9007A531706</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFB5A598FBB635052AB4109E85380D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFD1C0BD9EDD87936E2D824AB796DBDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -23,5 +23,10 @@ pod 'Kingfisher'       #图片加载
 
 pod 'Agrume', :git => 'https://github.com/JanGorman/Agrume.git'  #图片浏览器
 
+pod 'Cache' , '~>2.3.0'  #缓存
+
+pod 'WebViewJavascriptBridge'  # js与原生的交互
+
+
 end
 

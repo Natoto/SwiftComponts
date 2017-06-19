@@ -8,7 +8,6 @@
 import Foundation 
 import SwiftyJSON
 
-
 class PPGetHomeOpusListResp : NSObject, NSCoding{
 
 	var code : Int!
@@ -89,3 +88,4 @@ class PPGetHomeOpusListResp : NSObject, NSCoding{
 	}
 
 }
+
