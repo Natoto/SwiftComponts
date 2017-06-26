@@ -9,9 +9,11 @@ PODS:
   - JCAlertController (2.1.5)
   - Kingfisher (3.10.1)
   - NSObjectBlockSEL (0.0.1)
+  - SnapKit (3.2.0)
   - SVProgressHUD (2.1.2)
   - SwiftyJSON (3.1.4)
   - WebViewJavascriptBridge (6.0.2)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - Agrume (from `https://github.com/JanGorman/Agrume.git`)
@@ -22,9 +24,11 @@ DEPENDENCIES:
   - JCAlertController
   - Kingfisher
   - NSObjectBlockSEL (from `https://github.com/Natoto/HBLocalPod`)
+  - SnapKit (~> 3.2.0)
   - SVProgressHUD
   - SwiftyJSON
   - WebViewJavascriptBridge
+  - YYText
 
 EXTERNAL SOURCES:
   Agrume:
@@ -55,10 +59,12 @@ SPEC CHECKSUMS:
   JCAlertController: acc849a3853ffd94dd57b1d15ade9032519d1edc
   Kingfisher: 33a1b82140fcb14a9fc13f78dfde2a03ff8de8cb
   NSObjectBlockSEL: aa876bdc0e9a537a096b7ce044ded46f81234a31
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 3f223b5eaf4088c8dcc68398c30b5d902acc3556
+PODFILE CHECKSUM: 672322f06532a851e6515c4e389790a5b6be116a
 
 COCOAPODS: 1.1.1

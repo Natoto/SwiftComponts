@@ -98,7 +98,6 @@ extension ImageCollectionViewController{
 //            self.collectionView?.scrollToItem(at: IndexPath(row: index, section: 0), at: [], animated: false)
 //        }
 //        agrume.showFrom(self)
-        
         var images = Array<URL>.init()
         for idx in 1...10 {
             let url = URL(string: "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/kingfisher-\(idx + 1).jpg")!

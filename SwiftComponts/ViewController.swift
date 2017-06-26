@@ -20,7 +20,7 @@ class ViewController: HBBaseTableViewController {
                 "【4】富文本快速生成与使用",
                 "【5】上下拉加载",
                 "【6】RAC 数据流控制与刷新",
-                "【7】方法交换转移大法",
+                "【7】runtime方法交换转移大法",
                 "【8】多线程常用操作封装",
                 "【9】全屏滑动代码",
                 "【10】navigationbar和toolbar的创建",
@@ -47,6 +47,17 @@ class ViewController: HBBaseTableViewController {
         else if cs.key_indexpath == cs.key_indexpath(0, row: 3)
         {
              ctr = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebViewController") 
+        }
+        else if cs.key_indexpath == cs.key_indexpath(0, row: 4)
+        {
+            ctr = TextViewController.init()
+        }
+        
+        else if cs.key_indexpath == cs.key_indexpath(0, row: 7){
+            ctr = RunTimeViewController.init()
+        }
+        else if cs.key_indexpath == cs.key_indexpath(0, row: 8){
+            ctr = ThreadViewController.init()
         }
         else if cs.key_indexpath == cs.key_indexpath(0, row: 12){
             ctr = CustomAlertViewController.init()

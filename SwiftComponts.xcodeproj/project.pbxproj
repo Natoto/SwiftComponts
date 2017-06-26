@@ -23,6 +23,8 @@
 		F89694E11EEE664C009E2FAB /* RootClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89694DD1EEE664C009E2FAB /* RootClass.swift */; };
 		F89694E31EEE6FD0009E2FAB /* ModelExViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89694E21EEE6FD0009E2FAB /* ModelExViewController.swift */; };
 		F89694E51EEE8700009E2FAB /* HBEXNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89694E41EEE8700009E2FAB /* HBEXNSObject.swift */; };
+		F8B51B3C1EFB77C200C3988B /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B51B3B1EFB77C200C3988B /* NSMutableAttributedString+Extension.swift */; };
+		F8B51B3E1EFB78AE00C3988B /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B51B3D1EFB78AE00C3988B /* TextViewController.swift */; };
 		F8B8CC401EF7845B0012DB56 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8CC3F1EF7845B0012DB56 /* Log.swift */; };
 		F8B8CC451EF7C17A0012DB56 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B8CC441EF7C17A0012DB56 /* WebViewController.swift */; };
 		F8B8CC471EF7C1EF0012DB56 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = F8B8CC461EF7C1EF0012DB56 /* index.html */; };
@@ -36,6 +38,9 @@
 		F8BEA9831EEA88CD00B27BE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BEA9811EEA88CD00B27BE9 /* LaunchScreen.storyboard */; };
 		F8BEA98B1EEA9BA400B27BE9 /* NetWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA98A1EEA9BA400B27BE9 /* NetWorkViewController.swift */; };
 		F8BEA98D1EEA9CFE00B27BE9 /* EXHBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BEA98C1EEA9CFE00B27BE9 /* EXHBTableViewController.swift */; };
+		F8E794761EFA18E50095DBB9 /* RunTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E794751EFA18E50095DBB9 /* RunTimeViewController.swift */; };
+		F8F731851F00DF0100339BB8 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F731841F00DF0100339BB8 /* ThreadViewController.swift */; };
+		F8F731871F01043B00339BB8 /* emoji.txt in Resources */ = {isa = PBXBuildFile; fileRef = F8F731861F01043B00339BB8 /* emoji.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,8 @@
 		F89694DD1EEE664C009E2FAB /* RootClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootClass.swift; sourceTree = "<group>"; };
 		F89694E21EEE6FD0009E2FAB /* ModelExViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelExViewController.swift; sourceTree = "<group>"; };
 		F89694E41EEE8700009E2FAB /* HBEXNSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HBEXNSObject.swift; sourceTree = "<group>"; };
+		F8B51B3B1EFB77C200C3988B /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		F8B51B3D1EFB78AE00C3988B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		F8B8CC3F1EF7845B0012DB56 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		F8B8CC441EF7C17A0012DB56 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F8B8CC461EF7C1EF0012DB56 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -73,6 +80,9 @@
 		F8BEA9841EEA88CD00B27BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8BEA98A1EEA9BA400B27BE9 /* NetWorkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkViewController.swift; sourceTree = "<group>"; };
 		F8BEA98C1EEA9CFE00B27BE9 /* EXHBTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EXHBTableViewController.swift; sourceTree = "<group>"; };
+		F8E794751EFA18E50095DBB9 /* RunTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTimeViewController.swift; sourceTree = "<group>"; };
+		F8F731841F00DF0100339BB8 /* ThreadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadViewController.swift; sourceTree = "<group>"; };
+		F8F731861F01043B00339BB8 /* emoji.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emoji.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +117,11 @@
 		F89694D21EEE28F4009E2FAB /* HBSwiftComponts */ = {
 			isa = PBXGroup;
 			children = (
+				F8B51B3B1EFB77C200C3988B /* NSMutableAttributedString+Extension.swift */,
 				F89694E41EEE8700009E2FAB /* HBEXNSObject.swift */,
 				F895CF6E1EEE9BDE00DA783C /* HBEXUIColor.swift */,
 				F8B8CC481EF7C9200012DB56 /* SwiftWebViewBridge.swift */,
+				F8E794751EFA18E50095DBB9 /* RunTimeViewController.swift */,
 				F895CF701EEEA98500DA783C /* HBEXButton.swift */,
 				F89694D31EEE2C44009E2FAB /* HBLog.swift */,
 				F89694D51EEE48D5009E2FAB /* HBEXString.swift */,
@@ -158,12 +170,15 @@
 				F8BEA97A1EEA88CD00B27BE9 /* ViewController.swift */,
 				F8BEA98A1EEA9BA400B27BE9 /* NetWorkViewController.swift */,
 				F89694E21EEE6FD0009E2FAB /* ModelExViewController.swift */,
+				F8B51B3D1EFB78AE00C3988B /* TextViewController.swift */,
 				F895CF6C1EEE92F700DA783C /* CustomAlertViewController.swift */,
 				F8B8CC441EF7C17A0012DB56 /* WebViewController.swift */,
+				F8F731841F00DF0100339BB8 /* ThreadViewController.swift */,
 				F8BEA97C1EEA88CD00B27BE9 /* Main.storyboard */,
 				F89694D71EEE65E5009E2FAB /* PPGetHomeOpusListResp.json */,
 				F88BD1D21EEF810B00D0D7B6 /* CollectionViewCell.swift */,
 				F88BD1D31EEF810B00D0D7B6 /* ImageCollectionViewController.swift */,
+				F8F731861F01043B00339BB8 /* emoji.txt */,
 				F8BEA97F1EEA88CD00B27BE9 /* Assets.xcassets */,
 				F88BD1D91EEFA00A00D0D7B6 /* SwiftComponts-Bridging-Header.h */,
 				F8BEA9811EEA88CD00B27BE9 /* LaunchScreen.storyboard */,
@@ -241,6 +256,7 @@
 				F8B8CC471EF7C1EF0012DB56 /* index.html in Resources */,
 				F89694D81EEE65E5009E2FAB /* PPGetHomeOpusListResp.json in Resources */,
 				F8BEA9831EEA88CD00B27BE9 /* LaunchScreen.storyboard in Resources */,
+				F8F731871F01043B00339BB8 /* emoji.txt in Resources */,
 				F8B8CC4F1EF7DF4B0012DB56 /* SwiftWebViewBridge.js in Resources */,
 				F8BEA9801EEA88CD00B27BE9 /* Assets.xcassets in Resources */,
 				F8BEA97E1EEA88CD00B27BE9 /* Main.storyboard in Resources */,
@@ -312,18 +328,22 @@
 				F8BEA97B1EEA88CD00B27BE9 /* ViewController.swift in Sources */,
 				F89694D41EEE2C44009E2FAB /* HBLog.swift in Sources */,
 				F89694E31EEE6FD0009E2FAB /* ModelExViewController.swift in Sources */,
+				F8E794761EFA18E50095DBB9 /* RunTimeViewController.swift in Sources */,
 				F8BEA9791EEA88CD00B27BE9 /* AppDelegate.swift in Sources */,
 				F895CF6D1EEE92F700DA783C /* CustomAlertViewController.swift in Sources */,
 				F89694E01EEE664C009E2FAB /* PPGetHomeOpusListResp.swift in Sources */,
 				F88BD1D41EEF810B00D0D7B6 /* CollectionViewCell.swift in Sources */,
+				F8B51B3C1EFB77C200C3988B /* NSMutableAttributedString+Extension.swift in Sources */,
 				F89694DF1EEE664C009E2FAB /* OpusList.swift in Sources */,
 				F8BEA98D1EEA9CFE00B27BE9 /* EXHBTableViewController.swift in Sources */,
+				F8F731851F00DF0100339BB8 /* ThreadViewController.swift in Sources */,
 				F8B8CC401EF7845B0012DB56 /* Log.swift in Sources */,
 				F8BEA98B1EEA9BA400B27BE9 /* NetWorkViewController.swift in Sources */,
 				F88BD1D51EEF810B00D0D7B6 /* ImageCollectionViewController.swift in Sources */,
 				F89694D61EEE48D5009E2FAB /* HBEXString.swift in Sources */,
 				F8B8CC491EF7C9200012DB56 /* SwiftWebViewBridge.swift in Sources */,
 				F895CF711EEEA98500DA783C /* HBEXButton.swift in Sources */,
+				F8B51B3E1EFB78AE00C3988B /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

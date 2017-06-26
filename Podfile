@@ -27,6 +27,9 @@ pod 'Cache' , '~>2.3.0'  #缓存
 
 pod 'WebViewJavascriptBridge'  # js与原生的交互
 
+pod 'SnapKit', '~> 3.2.0'
+
+pod 'YYText'
 
 end
 

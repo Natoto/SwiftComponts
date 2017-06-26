@@ -1,154 +1,90 @@
-function loadjsbridge() {
-	if (window.SwiftWebViewBridge) {
-		return;
-	}
-	var hiddenMessagingIframe;
-	var unsentMessageQueue = [];
-	var startupRCVDMessageQueue = [];
-	var messageHandlers = {};
-	
-	var CUSTOM_PROTOCOL_SCHEME = 'swvbscheme';
-	var CUSTOM_PROTOCOL_HOST = '__SWVB_Host_MESSAGE__';
-	var TRIGGER_SOURCE = CUSTOM_PROTOCOL_SCHEME + '://' + CUSTOM_PROTOCOL_HOST;
-	
-	var responseCallbacks = {};
-	var uniqueId = 1;
-	
-	// create global bridge object
-	window.SwiftWebViewBridge = {
-		init: init,
-		sendDataToSwift: sendDataToSwift,
-		registerHandlerForSwift: registerHandlerForSwift,
-		callSwiftHandler: callSwiftHandler,
-		_fetchJSMessage: _fetchJSMessage,
-		_handleMessageFromSwift: _handleMessageFromSwift
-	};
+window.log = (function(){
+    var uniqueId = 1;
+    function _log(message, data) {
+        var logElem = document.getElementById("logContainer");
+        var newElem = document.createElement("div");
+        newElem.className = "logLine";
+        if (data) {
+            console.log(message + ":<br/>" + data);
+            newElem.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + JSON.stringify(data);
+        }
+        else {
+            console.log(message); 
+            newElem.innerHTML = uniqueId++ + '. ' + message;
+        }
+        if (logElem.children.length) {
+            logElem.insertBefore(newElem, logElem.children[0]);
+        }
+        else {
+            logElem.appendChild(newElem);
+        }
+    }
+    return {log: _log};
+})().log;
 
-	createHiddenIframe();
-	// dispatch event for the listener
-    var readyEvent = document.createEvent('Events');
-	readyEvent.initEvent('SwiftWebViewBridgeReady');
-	document.dispatchEvent(readyEvent);
+window.onerror = function(err) {
+    log("window.onerror: " + err);
+};
+
+function connectToSwiftWebViewBridge(callback) {
+    if (window.SwiftWebViewBridge) {
+        callback(SwiftWebViewBridge);
+    } else {
+        document.addEventListener('SwiftWebViewBridgeReady', function() {
+            callback(SwiftWebViewBridge);
+        }, false);
+    }
 }
 
+connectToSwiftWebViewBridge(function(bridge) {
+    bridge.init(function(message, responseCallback) {
+        log('JS got a message', message);
+        var data = {
+            'JS Responds': 'Message received = )'
+        };
+        responseCallback(data);
+    });
 
-    // create an iframe to trigger Swift entrance method(..shouldStartLoadWithRequest..) by setting the src
-	function createHiddenIframe() {
-		hiddenMessagingIframe = document.createElement('iframe');
-		hiddenMessagingIframe.style.display = 'none';
-		hiddenMessagingIframe.src = TRIGGER_SOURCE;
-		document.documentElement.appendChild(hiddenMessagingIframe);
-	}
+    bridge.registerHandlerForSwift('alertReceivedParmas', function(data, responseCallback) {
+        log('Swift called alertPassinParmas with', JSON.stringify(data));
+        alert(JSON.stringify(data));
+        var responseData = {
+            'JS Responds': 'alert triggered' 
+        };
+        responseCallback(responseData);
+    });
 
-	function helloSwift() {
-        alert('hello');
-		hiddenMessagingIframe.src = TRIGGER_SOURCE;
-	}
+    window.testSendDataToSwift = function() {
+        bridge.sendDataToSwift('Say Hello Swiftly to Swift');
+    };
+});
 
-	function init(defaultHandler) {
-		if (SwiftWebViewBridge._defaultHandler) { 
-			throw new Error('SwiftWebViewBridge.init called twice');
-		}
-		SwiftWebViewBridge._defaultHandler = defaultHandler;
+function testSendDataToSwiftWithCallback() {
+//    alert("test");
+    SwiftWebViewBridge.sendDataToSwift('Hi, anybody there?' , function(responseData) {
+        alert("got your response: " + JSON.stringify(responseData));
+    });
+}
 
-		// handle msgs received before bridge init.(Swift starts sending msgs when all urls did load, inclued failed loadings)
-		var receivedMessages = startupRCVDMessageQueue;
-		startupRCVDMessageQueue = null;
-		for (var i = 0; i < receivedMessages.length; i++) {
-			dispatchMessageFromSwift(receivedMessages[i]);
-		}
-	}
+function testCallSwiftHandler() {
+    data = {
+        "name": "小明", 
+        "age": "6", 
+        "school": "GDUT"
+    };
+    log('JS is calling printReceivedParmas handler of Swift', data);
+    SwiftWebViewBridge.callSwiftHandler("printReceivedParmas", data, null);
+}
 
-	// Method For Swift Calling
-	
-	// Swift fetch messages by calling this method
-	function _fetchJSMessage() {
-		var messageQueueString = JSON.stringify(unsentMessageQueue);
-		unsentMessageQueue = [];
-		return messageQueueString;
-	}
-
-	// Swift send message to this entrance
-	function _handleMessageFromSwift(jsonMsg) {
-		if (startupRCVDMessageQueue) {
-			startupRCVDMessageQueue.push(jsonMsg);
-		} 
-		else {
-			dispatchMessageFromSwift(jsonMsg);
-		}
-	}
-
-	// Interaction Between Swift & JS
-
-	function sendDataToSwift(data, responseCallback) {
-		alert("sending");
-		callSwiftHandler(null, data, responseCallback);
-	}
-  
-    function callSwiftHandler(handlerName, data, responseCallback) {
-		var message = handlerName ? {handlerName: handlerName, data: data} : {data: data};
-        if (responseCallback) {
-            var callbackId = 'cb_'+(uniqueId++)+'_JS_'+new Date().getTime();
-            responseCallbacks[callbackId] = responseCallback;
-            message['callbackId'] = callbackId;
-		}
-		unsentMessageQueue.push(message);
-		helloSwift();
-    }
-
-    function triggerSwiftCallback(message) {
-    	unsentMessageQueue.push(message);
-    	helloSwift();
-    }
-
-	function registerHandlerForSwift(handlerName, handler) {
-		messageHandlers[handlerName] = handler;
-	}
-
-	// Message Dispatch
-	function dispatchMessageFromSwift(jsonMsg) {
-		window.setTimeout(function timeoutDispatchMessageFromSwift() {
-			var message = JSON.parse(jsonMsg);
-			var responseCallback;
-			// JS callback(after Swift finished designated handler called by JS)
-			if (message.responseId) {
-				responseCallback = responseCallbacks[message.responseId];
-				if (responseCallback) {
-					responseCallback(message.responseData);
-					delete responseCallbacks[message.responseId];
-				}
-			} 
-			else {// Swift call JS handler
-				if (message.callbackId) {
-					// if there is callbackId(that means Swift has a callback), 
-					// JS send it back as responseId to Swift so that Swift can find and execute callback 
-					var callbackResponseId = message.callbackId;
-					responseCallback = function(responseData) {	
-						triggerSwiftCallback({
-							responseId: callbackResponseId, 
-							responseData: responseData 
-						});
-					};
-				}
-				
-				var handler = SwiftWebViewBridge._defaultHandler;
-				if (message.handlerName) {
-					handler = messageHandlers[message.handlerName];
-				}
-			
-				if (handler) {
-					try {
-						handler(message.data, responseCallback);
-					} 
-					catch(exception) {
-						if (typeof console != 'undefined') {
-							console.log('SwiftWebViewBridge: WARNING: javascript handler threw.', message, exception);
-						}
-					}
-				}
-				else {
-					onerror('No defaultHandler!');
-				}
-			}
-		});
-	}
+function testCallSwiftHandlerWithCallback() {
+    SwiftWebViewBridge.callSwiftHandler("printReceivedParmas", 
+                                        {
+                                            "name": "小明",
+                                            "age": "6", 
+                                            "school": "GDUT"
+                                        }, 
+                                        function(responseData)
+                                        {
+                                            log('JS got responds from Swift: ', responseData);
+                                        });
+}
